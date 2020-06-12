@@ -7,7 +7,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['enigmatic-anchorage-95284.herokuapp.com']
+ALLOWED_HOSTS = ['morning-castle-50174.herokuapp.com']
 
 
 INSTALLED_APPS = [
