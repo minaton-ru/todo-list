@@ -3,9 +3,9 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = ')86cg#zfls8m(!wbz_nsh2u7bn-c65xxn$#@=wbk-7k16np*jf'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['morning-castle-50174.herokuapp.com']
 
