@@ -5,3 +5,4 @@ gunicorn==20.0.4
 pylibmc==1.5.2
 python-binary-memcached
 django-bmemcached
+python-memcached
