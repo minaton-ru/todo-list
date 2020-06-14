@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from tasks.models import TodoItem, Category
+from tasks.models import TodoItem, Category, Priority
 
 
 @admin.register(TodoItem)
@@ -12,3 +12,6 @@ class TodoItemAdmin(admin.ModelAdmin):
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('slug', 'name')
 
+@admin.register(Priority)
+class PriorityAdmin(admin.ModelAdmin):
+    list_display = ('slug', 'name')

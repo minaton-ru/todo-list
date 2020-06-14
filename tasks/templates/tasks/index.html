@@ -4,12 +4,20 @@
 {% block title %}Информация по категориям{% endblock %}
 
 {% block main_content %}
-  <h1>Категории и числа</h1>
+  <h2>Количество задач в каждой категории</h2>
   <ul>
   {% for cat in counts %}
     <li><span class="badge badge-info">{{ cat.name }}: {{ cat.todos_count }}</span></li>
   {% empty %}
     <li>Список задач по категориям пуст. Попробуйте добавить их из админки</li>
+  {% endfor %}
+  </ul>
+  <h2>Количество задач по приоритетам</h2>
+  <ul>
+  {% for prior in priorities %}
+    <li><span class="badge badge-info">{{ prior.name }}: {{ prior.todos_count }}</span></li>
+  {% empty %}
+    <li>Список задач с приоритетами пуст. Попробуйте добавить их из админки</li>
   {% endfor %}
   </ul>
 {% endblock %}

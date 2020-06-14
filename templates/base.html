@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>{% block title %}PWS Todo example app{% endblock %}</title>
+    <title>{% block title %}Todo example app{% endblock %}</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -20,9 +20,10 @@
               <p>{{ user.first_name }}</p>
               <p>Login: {{ user.username }}</p>
 
-              <i class="fas fa-clipboard-list"></i>&nbsp;<a href="{% url "tasks:list" %}">задачи</a>
+              <i class="fas fa-clipboard-list"><a href="{% url "tasks:list" %}">задачи</a></i>
+              <i class="fas fa-clipboard-list"><a href="{% url "tasks:index" %}">главная</a></i>
             {% endif %}
-	    <i class="fas fa-cog"></i>&nbsp;<a href='{% url 'admin:index' %}'>админка</a>
+	    <p><a href='{% url 'admin:index' %}'>админка</a></p>
           {% endblock %}
         </div>
 

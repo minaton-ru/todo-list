@@ -1,13 +1,17 @@
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
-from tasks.models import TodoItem, Category
+from tasks.models import TodoItem, Category, Priority
 
 
 def index(request):
-
+    priorities = Priority.objects.all()
     counts = Category.objects.all()
-    return render(request, "tasks/index.html", {"counts": counts})
+    index_data = {
+        "priorities": priorities,
+        "counts": counts
+    }
+    return render(request, "tasks/index.html", index_data)
 
 
 def filter_tasks(tags_by_task):
